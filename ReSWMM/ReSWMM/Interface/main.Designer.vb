@@ -269,7 +269,7 @@ Partial Class main
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ReSWMM Tool v 0.1"
+        Me.Text = "ReSWMM Tool v 0.2"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
