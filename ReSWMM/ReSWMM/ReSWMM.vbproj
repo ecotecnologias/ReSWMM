@@ -88,12 +88,6 @@
     <Compile Include="Interface\configDxD.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\configRI.Designer.vb">
-      <DependentUpon>configRI.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\configRI.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Classes\inpData.vb" />
     <Compile Include="Interface\main.vb">
       <SubType>Form</SubType>
@@ -146,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\configIF.resx">
       <DependentUpon>configIF.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\configRI.resx">
-      <DependentUpon>configRI.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\main.resx">
       <DependentUpon>main.vb</DependentUpon>

@@ -40,13 +40,8 @@ Partial Class main
         Me.pbAnalyze = New System.Windows.Forms.ProgressBar()
         Me.tbInputFile = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.rbNecessaryDisc = New System.Windows.Forms.RadioButton()
-        Me.rbRegularDisc = New System.Windows.Forms.RadioButton()
         Me.rbFIDisc = New System.Windows.Forms.RadioButton()
-        Me.bRunNecDisc = New System.Windows.Forms.Button()
-        Me.bConfRegDisc = New System.Windows.Forms.Button()
         Me.bConfIFDisc = New System.Windows.Forms.Button()
-        Me.bRunRegDisc = New System.Windows.Forms.Button()
         Me.bRunIFDisc = New System.Windows.Forms.Button()
         Me.bRunDxDDisc = New System.Windows.Forms.Button()
         Me.bConfDxD = New System.Windows.Forms.Button()
@@ -77,7 +72,7 @@ Partial Class main
         '
         'bClose
         '
-        Me.bClose.Location = New System.Drawing.Point(16, 752)
+        Me.bClose.Location = New System.Drawing.Point(16, 542)
         Me.bClose.Name = "bClose"
         Me.bClose.Size = New System.Drawing.Size(448, 39)
         Me.bClose.TabIndex = 2
@@ -159,7 +154,7 @@ Partial Class main
         '
         'pbAnalyze
         '
-        Me.pbAnalyze.Location = New System.Drawing.Point(16, 712)
+        Me.pbAnalyze.Location = New System.Drawing.Point(16, 502)
         Me.pbAnalyze.Name = "pbAnalyze"
         Me.pbAnalyze.Size = New System.Drawing.Size(448, 24)
         Me.pbAnalyze.TabIndex = 4
@@ -180,83 +175,31 @@ Partial Class main
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Input File Directory:"
         '
-        'rbNecessaryDisc
-        '
-        Me.rbNecessaryDisc.AutoSize = True
-        Me.rbNecessaryDisc.Enabled = False
-        Me.rbNecessaryDisc.Location = New System.Drawing.Point(16, 312)
-        Me.rbNecessaryDisc.Name = "rbNecessaryDisc"
-        Me.rbNecessaryDisc.Size = New System.Drawing.Size(187, 24)
-        Me.rbNecessaryDisc.TabIndex = 10
-        Me.rbNecessaryDisc.Text = "Minimal Discretization"
-        Me.rbNecessaryDisc.UseVisualStyleBackColor = True
-        '
-        'rbRegularDisc
-        '
-        Me.rbRegularDisc.AutoSize = True
-        Me.rbRegularDisc.Enabled = False
-        Me.rbRegularDisc.Location = New System.Drawing.Point(16, 408)
-        Me.rbRegularDisc.Name = "rbRegularDisc"
-        Me.rbRegularDisc.Size = New System.Drawing.Size(200, 24)
-        Me.rbRegularDisc.TabIndex = 11
-        Me.rbRegularDisc.Text = "Standard Discretization"
-        Me.rbRegularDisc.UseVisualStyleBackColor = True
-        '
         'rbFIDisc
         '
         Me.rbFIDisc.AutoSize = True
         Me.rbFIDisc.Enabled = False
-        Me.rbFIDisc.Location = New System.Drawing.Point(24, 512)
+        Me.rbFIDisc.Location = New System.Drawing.Point(24, 302)
         Me.rbFIDisc.Name = "rbFIDisc"
         Me.rbFIDisc.Size = New System.Drawing.Size(228, 24)
         Me.rbFIDisc.TabIndex = 12
         Me.rbFIDisc.Text = "Interval Fixed Discretization"
         Me.rbFIDisc.UseVisualStyleBackColor = True
         '
-        'bRunNecDisc
-        '
-        Me.bRunNecDisc.Enabled = False
-        Me.bRunNecDisc.Location = New System.Drawing.Point(16, 352)
-        Me.bRunNecDisc.Name = "bRunNecDisc"
-        Me.bRunNecDisc.Size = New System.Drawing.Size(448, 40)
-        Me.bRunNecDisc.TabIndex = 13
-        Me.bRunNecDisc.Text = "Run"
-        Me.bRunNecDisc.UseVisualStyleBackColor = True
-        '
-        'bConfRegDisc
-        '
-        Me.bConfRegDisc.Enabled = False
-        Me.bConfRegDisc.Location = New System.Drawing.Point(16, 448)
-        Me.bConfRegDisc.Name = "bConfRegDisc"
-        Me.bConfRegDisc.Size = New System.Drawing.Size(305, 40)
-        Me.bConfRegDisc.TabIndex = 14
-        Me.bConfRegDisc.Text = "Configure"
-        Me.bConfRegDisc.UseVisualStyleBackColor = True
-        '
         'bConfIFDisc
         '
         Me.bConfIFDisc.Enabled = False
-        Me.bConfIFDisc.Location = New System.Drawing.Point(16, 552)
+        Me.bConfIFDisc.Location = New System.Drawing.Point(16, 342)
         Me.bConfIFDisc.Name = "bConfIFDisc"
         Me.bConfIFDisc.Size = New System.Drawing.Size(305, 40)
         Me.bConfIFDisc.TabIndex = 15
         Me.bConfIFDisc.Text = "Configure"
         Me.bConfIFDisc.UseVisualStyleBackColor = True
         '
-        'bRunRegDisc
-        '
-        Me.bRunRegDisc.Enabled = False
-        Me.bRunRegDisc.Location = New System.Drawing.Point(336, 448)
-        Me.bRunRegDisc.Name = "bRunRegDisc"
-        Me.bRunRegDisc.Size = New System.Drawing.Size(128, 40)
-        Me.bRunRegDisc.TabIndex = 16
-        Me.bRunRegDisc.Text = "Run"
-        Me.bRunRegDisc.UseVisualStyleBackColor = True
-        '
         'bRunIFDisc
         '
         Me.bRunIFDisc.Enabled = False
-        Me.bRunIFDisc.Location = New System.Drawing.Point(336, 552)
+        Me.bRunIFDisc.Location = New System.Drawing.Point(336, 342)
         Me.bRunIFDisc.Name = "bRunIFDisc"
         Me.bRunIFDisc.Size = New System.Drawing.Size(128, 40)
         Me.bRunIFDisc.TabIndex = 17
@@ -266,7 +209,7 @@ Partial Class main
         'bRunDxDDisc
         '
         Me.bRunDxDDisc.Enabled = False
-        Me.bRunDxDDisc.Location = New System.Drawing.Point(335, 656)
+        Me.bRunDxDDisc.Location = New System.Drawing.Point(335, 446)
         Me.bRunDxDDisc.Name = "bRunDxDDisc"
         Me.bRunDxDDisc.Size = New System.Drawing.Size(128, 40)
         Me.bRunDxDDisc.TabIndex = 20
@@ -276,7 +219,7 @@ Partial Class main
         'bConfDxD
         '
         Me.bConfDxD.Enabled = False
-        Me.bConfDxD.Location = New System.Drawing.Point(15, 656)
+        Me.bConfDxD.Location = New System.Drawing.Point(15, 446)
         Me.bConfDxD.Name = "bConfDxD"
         Me.bConfDxD.Size = New System.Drawing.Size(305, 40)
         Me.bConfDxD.TabIndex = 19
@@ -287,7 +230,7 @@ Partial Class main
         '
         Me.rbDxD.AutoSize = True
         Me.rbDxD.Enabled = False
-        Me.rbDxD.Location = New System.Drawing.Point(23, 616)
+        Me.rbDxD.Location = New System.Drawing.Point(23, 406)
         Me.rbDxD.Name = "rbDxD"
         Me.rbDxD.Size = New System.Drawing.Size(215, 24)
         Me.rbDxD.TabIndex = 18
@@ -297,7 +240,7 @@ Partial Class main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(208, 784)
+        Me.Label2.Location = New System.Drawing.Point(208, 574)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 20)
         Me.Label2.TabIndex = 21
@@ -307,19 +250,14 @@ Partial Class main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(479, 822)
+        Me.ClientSize = New System.Drawing.Size(479, 602)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.bRunDxDDisc)
         Me.Controls.Add(Me.bConfDxD)
         Me.Controls.Add(Me.rbDxD)
         Me.Controls.Add(Me.bRunIFDisc)
-        Me.Controls.Add(Me.bRunRegDisc)
         Me.Controls.Add(Me.bConfIFDisc)
-        Me.Controls.Add(Me.bConfRegDisc)
-        Me.Controls.Add(Me.bRunNecDisc)
         Me.Controls.Add(Me.rbFIDisc)
-        Me.Controls.Add(Me.rbRegularDisc)
-        Me.Controls.Add(Me.rbNecessaryDisc)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tbInputFile)
         Me.Controls.Add(Me.pbAnalyze)
@@ -352,13 +290,8 @@ Partial Class main
     Friend WithEvents pbAnalyze As ProgressBar
     Friend WithEvents tbInputFile As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents rbNecessaryDisc As RadioButton
-    Friend WithEvents rbRegularDisc As RadioButton
     Friend WithEvents rbFIDisc As RadioButton
-    Friend WithEvents bRunNecDisc As Button
-    Friend WithEvents bConfRegDisc As Button
     Friend WithEvents bConfIFDisc As Button
-    Friend WithEvents bRunRegDisc As Button
     Friend WithEvents bRunIFDisc As Button
     Friend WithEvents bRunDxDDisc As Button
     Friend WithEvents bConfDxD As Button

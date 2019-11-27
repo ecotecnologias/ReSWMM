@@ -124,8 +124,6 @@ Module functionsMain
         main.pbAnalyze.Value() = 0
 
         'Enable the radio buttons
-        main.rbNecessaryDisc.Enabled = True
-        main.rbRegularDisc.Enabled = True
         main.rbFIDisc.Enabled = True
         main.rbDxD.Enabled = True
 
@@ -256,15 +254,7 @@ Module functionsMain
         retrievingData.Show()
         retrievingData.Refresh()
         retrievingData.ProgressBar2.Maximum = 8
-
-        'Get type of discretization
-        If configIF.JunMH.Checked Then ManholeType = 0
-        If configIF.SuMH.Checked Then ManholeType = 1
-        If configIF.JunDis.Checked Then DiscType = 0
-        If configIF.SuDis.Checked Then DiscType = 1
-
         'Get Discretization Data
-        If type = 1 Then regI = configRI.RegI.Text()
         If type = 2 Then
             minInterval = configIF.MinI.Text()
             maxInterval = configIF.MaxI.Text()

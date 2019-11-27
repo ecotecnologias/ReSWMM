@@ -81,63 +81,6 @@ Public Class main
     End Sub
 
     '----------------------------------------------------------------------------------------
-    ' NECESSARY DISCRETIZATION
-    '----------------------------------------------------------------------------------------
-
-    'If necessary discretization is checked, allow the run button
-    Private Sub rbNecessaryDisc_CheckedChanged(sender As Object, e As EventArgs) Handles rbNecessaryDisc.CheckedChanged
-
-        If bRunNecDisc.Enabled() = False Then
-            bRunNecDisc.Enabled() = True
-        Else
-            bRunNecDisc.Enabled() = False
-        End If
-
-
-    End Sub
-
-    'Sub to run the Necessary Discretization
-    Private Sub bRunNecDisc_Click(sender As Object, e As EventArgs) Handles bRunNecDisc.Click
-
-        'Get SWMM Directory
-        SWMMDir = tbInputFile.Text()
-        runNecessaryDiscretization(SWMMDir)
-
-    End Sub
-
-    '----------------------------------------------------------------------------------------
-    ' REGULAR DISCRETIZATION
-    '----------------------------------------------------------------------------------------
-
-    'If regular discretization is checked, allow the configure button
-    Private Sub rbRegularDisc_CheckedChanged(sender As Object, e As EventArgs) Handles rbRegularDisc.CheckedChanged
-
-        If bConfRegDisc.Enabled() = False Then
-            bConfRegDisc.Enabled() = True
-        Else
-            bConfRegDisc.Enabled() = False
-        End If
-
-
-    End Sub
-
-    'Sub to open configuration for regular discretization
-    Private Sub bConfRegDisc_Click(sender As Object, e As EventArgs) Handles bConfRegDisc.Click
-
-        configRI.Show()
-
-    End Sub
-
-    'Sub to run the regular discretization
-    Private Sub bRunRegDisc_Click(sender As Object, e As EventArgs) Handles bRunRegDisc.Click
-
-        'Get SWMM Directory
-        SWMMDir = tbInputFile.Text()
-        runFunctions(SWMMDir, 1)
-
-    End Sub
-
-    '----------------------------------------------------------------------------------------
     ' FIXED INTERVAL DISCRETIZATION
     '----------------------------------------------------------------------------------------
 
