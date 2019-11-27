@@ -50,8 +50,9 @@ Partial Class main
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.SelectCelerityCB = New System.Windows.Forms.ComboBox()
-        Me.RunSWMM = New System.Windows.Forms.Button()
+        Me.RunNDSWMM = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.RunDSWMM = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -270,6 +271,7 @@ Partial Class main
         '
         'SelectCelerityCB
         '
+        Me.SelectCelerityCB.Enabled = False
         Me.SelectCelerityCB.FormattingEnabled = True
         Me.SelectCelerityCB.Items.AddRange(New Object() {"Default", "250 m/s", "500 m/s", "1000 m/s"})
         Me.SelectCelerityCB.Location = New System.Drawing.Point(15, 589)
@@ -277,14 +279,15 @@ Partial Class main
         Me.SelectCelerityCB.Size = New System.Drawing.Size(449, 28)
         Me.SelectCelerityCB.TabIndex = 24
         '
-        'RunSWMM
+        'RunNDSWMM
         '
-        Me.RunSWMM.Location = New System.Drawing.Point(15, 632)
-        Me.RunSWMM.Name = "RunSWMM"
-        Me.RunSWMM.Size = New System.Drawing.Size(448, 39)
-        Me.RunSWMM.TabIndex = 25
-        Me.RunSWMM.Text = "Run SWMM"
-        Me.RunSWMM.UseVisualStyleBackColor = True
+        Me.RunNDSWMM.Enabled = False
+        Me.RunNDSWMM.Location = New System.Drawing.Point(16, 632)
+        Me.RunNDSWMM.Name = "RunNDSWMM"
+        Me.RunNDSWMM.Size = New System.Drawing.Size(217, 39)
+        Me.RunNDSWMM.TabIndex = 25
+        Me.RunNDSWMM.Text = "Run non-discretized SWMM"
+        Me.RunNDSWMM.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -295,14 +298,25 @@ Partial Class main
         Me.Label5.Size = New System.Drawing.Size(447, 2)
         Me.Label5.TabIndex = 26
         '
+        'RunDSWMM
+        '
+        Me.RunDSWMM.Enabled = False
+        Me.RunDSWMM.Location = New System.Drawing.Point(247, 632)
+        Me.RunDSWMM.Name = "RunDSWMM"
+        Me.RunDSWMM.Size = New System.Drawing.Size(217, 39)
+        Me.RunDSWMM.TabIndex = 27
+        Me.RunDSWMM.Text = "Run discretized SWMM"
+        Me.RunDSWMM.UseVisualStyleBackColor = True
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(479, 757)
+        Me.Controls.Add(Me.RunDSWMM)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.RunSWMM)
+        Me.Controls.Add(Me.RunNDSWMM)
         Me.Controls.Add(Me.SelectCelerityCB)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -359,6 +373,7 @@ Partial Class main
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents SelectCelerityCB As ComboBox
-    Friend WithEvents RunSWMM As Button
+    Friend WithEvents RunNDSWMM As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents RunDSWMM As Button
 End Class

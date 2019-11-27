@@ -127,6 +127,10 @@ Module functionsMain
         main.rbFIDisc.Enabled = True
         main.rbDxD.Enabled = True
 
+        'Enable the celerity selection
+        main.SelectCelerityCB.Enabled = True
+
+
         'Total nodes in the model
         'totalNodes = junctionCounter + outfallCounter + storageCounter '+dividers
 

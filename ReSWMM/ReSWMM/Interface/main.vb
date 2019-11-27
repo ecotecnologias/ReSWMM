@@ -126,6 +126,14 @@ Public Class main
 
     End Sub
 
+    '
+    Private Sub SelectCelerityCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SelectCelerityCB.SelectedIndexChanged
+
+        RunNDSWMM.Enabled() = True
+        RunDSWMM.Enabled() = True
+
+    End Sub
+
     'Sub to open configuration for DxD discretization
     Private Sub bConfDxD_Click(sender As Object, e As EventArgs) Handles bConfDxD.Click
 
