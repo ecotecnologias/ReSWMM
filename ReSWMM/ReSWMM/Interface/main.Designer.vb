@@ -47,6 +47,11 @@ Partial Class main
         Me.bConfDxD = New System.Windows.Forms.Button()
         Me.rbDxD = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.SelectCelerityCB = New System.Windows.Forms.ComboBox()
+        Me.RunSWMM = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +77,7 @@ Partial Class main
         '
         'bClose
         '
-        Me.bClose.Location = New System.Drawing.Point(16, 542)
+        Me.bClose.Location = New System.Drawing.Point(16, 700)
         Me.bClose.Name = "bClose"
         Me.bClose.Size = New System.Drawing.Size(448, 39)
         Me.bClose.TabIndex = 2
@@ -240,17 +245,67 @@ Partial Class main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(208, 574)
+        Me.Label2.Location = New System.Drawing.Point(208, 732)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 20)
         Me.Label2.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 2.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(16, 541)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(447, 2)
+        Me.Label3.TabIndex = 22
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 555)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(114, 20)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Select Celerity:"
+        '
+        'SelectCelerityCB
+        '
+        Me.SelectCelerityCB.FormattingEnabled = True
+        Me.SelectCelerityCB.Items.AddRange(New Object() {"Default", "250 m/s", "500 m/s", "1000 m/s"})
+        Me.SelectCelerityCB.Location = New System.Drawing.Point(15, 589)
+        Me.SelectCelerityCB.Name = "SelectCelerityCB"
+        Me.SelectCelerityCB.Size = New System.Drawing.Size(449, 28)
+        Me.SelectCelerityCB.TabIndex = 24
+        '
+        'RunSWMM
+        '
+        Me.RunSWMM.Location = New System.Drawing.Point(15, 632)
+        Me.RunSWMM.Name = "RunSWMM"
+        Me.RunSWMM.Size = New System.Drawing.Size(448, 39)
+        Me.RunSWMM.TabIndex = 25
+        Me.RunSWMM.Text = "Run SWMM"
+        Me.RunSWMM.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 2.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(16, 685)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(447, 2)
+        Me.Label5.TabIndex = 26
         '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(144.0!, 144.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(479, 602)
+        Me.ClientSize = New System.Drawing.Size(479, 757)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.RunSWMM)
+        Me.Controls.Add(Me.SelectCelerityCB)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.bRunDxDDisc)
         Me.Controls.Add(Me.bConfDxD)
@@ -301,4 +356,9 @@ Partial Class main
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents AboutToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents SelectCelerityCB As ComboBox
+    Friend WithEvents RunSWMM As Button
+    Friend WithEvents Label5 As Label
 End Class
