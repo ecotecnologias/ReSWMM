@@ -130,7 +130,6 @@ Module functionsMain
         'Enable the celerity selection
         main.SelectCelerityCB.Enabled = True
 
-
         'Total nodes in the model
         'totalNodes = junctionCounter + outfallCounter + storageCounter '+dividers
 

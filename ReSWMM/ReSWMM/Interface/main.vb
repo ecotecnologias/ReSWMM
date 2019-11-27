@@ -126,14 +126,6 @@ Public Class main
 
     End Sub
 
-    '
-    Private Sub SelectCelerityCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SelectCelerityCB.SelectedIndexChanged
-
-        RunNDSWMM.Enabled() = True
-        RunDSWMM.Enabled() = True
-
-    End Sub
-
     'Sub to open configuration for DxD discretization
     Private Sub bConfDxD_Click(sender As Object, e As EventArgs) Handles bConfDxD.Click
 
@@ -181,6 +173,33 @@ Public Class main
     'Close the main form
     Private Sub bClose_Click(sender As Object, e As EventArgs) Handles bClose.Click
         Me.Close()
+    End Sub
+
+    '----------------------------------------------------------------------------------------
+    ' RUN SWMM
+    '----------------------------------------------------------------------------------------
+
+    'Sub to enable the Run buttons
+    Private Sub SelectCelerityCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SelectCelerityCB.SelectedIndexChanged
+
+        RunNDSWMM.Enabled() = True
+        RunDSWMM.Enabled() = True
+
+    End Sub
+
+    'Sub to run the Non Discretized SWMM
+    Private Sub RunNDSWMM_Click(sender As Object, e As EventArgs) Handles RunNDSWMM.Click
+
+        functionsAux.runSWMM(SelectCelerityCB.SelectedIndex, SWMMDir)
+
+    End Sub
+
+    'Sub to run the Discretized SWMM
+    Private Sub RunDSWMM_Click(sender As Object, e As EventArgs) Handles RunDSWMM.Click
+
+        SWMMDir = SWMMDir.Remove(SWMMDir.Length - 4) + "_Disc.inp"
+        functionsAux.runSWMM(SelectCelerityCB.SelectedIndex, SWMMDir)
+
     End Sub
 
 End Class

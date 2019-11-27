@@ -1,7 +1,5 @@
 ﻿Public Class functionsAux
 
-
-
     '####################################################
     '############## SUBS TO ADJUST ARRAYS ###############
     '####################################################
@@ -136,6 +134,55 @@
     Public Shared Function coordinatesLine(ByVal uNode, dNode, counter, x1, y1)
 
         coordinatesLine = uNode & "_" & dNode & "_" & (counter + 1).ToString & vbTab & x1.ToString & vbTab & y1.ToString
+
+    End Function
+
+    'Sub to run SWMM
+    Public Shared Function runSWMM(ByVal dll, SWMMDir)
+
+        Dim executablePath As String = System.IO.Path.GetDirectoryName(
+            System.Reflection.Assembly.GetExecutingAssembly().CodeBase) + "\dlls\"
+
+        Dim mountedPathRun As String
+
+        If dll = 0 Then
+
+            mountedPathRun = executablePath.Remove(0, 6) + "default\swmm5.exe" + " " + SWMMDir + " " + SWMMDir.Remove(SWMMDir.Length - 3) + "rpt " + SWMMDir.Remove(SWMMDir.Length - 3) + "out"
+            Shell(mountedPathRun)
+
+        End If
+
+        If dll = 1 Then
+
+            mountedPathRun = executablePath.Remove(0, 6) + "250\swmm5.exe" + " " + SWMMDir + " " + SWMMDir.Remove(SWMMDir.Length - 3) + "rpt " + SWMMDir.Remove(SWMMDir.Length - 3) + "out"
+            Shell(mountedPathRun)
+
+
+        End If
+
+        If dll = 2 Then
+
+            mountedPathRun = executablePath.Remove(0, 6) + "500\swmm5.exe" + " " + SWMMDir + " " + SWMMDir.Remove(SWMMDir.Length - 3) + "rpt " + SWMMDir.Remove(SWMMDir.Length - 3) + "out"
+            Shell(mountedPathRun)
+
+
+        End If
+
+        If dll = 3 Then
+
+            mountedPathRun = executablePath.Remove(0, 6) + "1000\swmm5.exe" + " " + SWMMDir + " " + SWMMDir.Remove(SWMMDir.Length - 3) + "rpt " + SWMMDir.Remove(SWMMDir.Length - 3) + "out"
+            Shell(mountedPathRun)
+
+
+        End If
+
+        MsgBox("SWMM simulation complete! Check for rpt and out files.")
+
+        Dim file As System.IO.StreamWriter
+        file = My.Computer.FileSystem.OpenTextFileWriter(SWMMDir.Remove(SWMMDir.Length - 3) + "ini", True)
+        file.WriteLine("[Results]")
+        file.WriteLine("Saved=1")
+        file.Close()
 
     End Function
 
