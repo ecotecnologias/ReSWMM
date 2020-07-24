@@ -406,50 +406,49 @@ Module functionsMain
                     End If
                 End If
             Next
-
-            'Adjust conduit shape
-            If xsectionShape = "IRREGULAR" Then
-                MsgBox("IRREGULAR SHAPE NOT WORKING")
-                Exit Function
-            Else
-                'REGULAR INTERVAL
-                If type = 1 Then
-                    numberOfDisNodes = regI
-                    disLength = conduitLength / (numberOfDisNodes + 1)
-                End If
-                'FIXED INTERVAL
-                If type = 2 Then
-                    If conduitLength Mod minInterval = 0 Then
-                        'numberOfDisNodes is the number of discretization nodes
-                        'All nodes inside a conduit is numberOfDisNodes + 2
-                        numberOfDisNodes = (conduitLength / minInterval) - 1
-                        disLength = minInterval
+            'REGULAR INTERVAL
+            If type = 1 Then
+                numberOfDisNodes = regI
+                disLength = conduitLength / (numberOfDisNodes + 1)
+            End If
+            'FIXED INTERVAL
+            If type = 2 Then
+                If conduitLength Mod minInterval = 0 Then
+                    'numberOfDisNodes is the number of discretization nodes
+                    'All nodes inside a conduit is numberOfDisNodes + 2
+                    numberOfDisNodes = (conduitLength / minInterval) - 1
+                    disLength = minInterval
+                Else
+                    'numberOfDisNodes and distLenght are being used in
+                    'this loop as auxiliar variables
+                    numberOfDisNodes = conduitLength / minInterval
+                    If numberOfDisNodes < 1 Then
+                        numberOfDisNodes = numberOfDisNodes
                     Else
-                        'numberOfDisNodes and distLenght are being used in
-                        'this loop as auxiliar variables
-                        numberOfDisNodes = conduitLength / minInterval
-                        If numberOfDisNodes < 1 Then
-                            numberOfDisNodes = numberOfDisNodes
-                        Else
-                            'Create discretization when there is not remainder
-                            While Math.Abs(Math.Round(numberOfDisNodes, 0) - numberOfDisNodes) >= 0.0001
-                                'Milimiter precision
-                                minInterval += 0.0001
-                                numberOfDisNodes = conduitLength / minInterval
-                            End While
-                            disLength = minInterval
-                            numberOfDisNodes = numberOfDisNodes - 1
-                            'Verify the intervals
-                            If disLength > maxInterval Then
-                                MsgBox("Please, increase your interval range")
-                                main.pbAnalyze.Value = 0
-                                Exit Function
-                            End If
+                        'Create discretization when there is not remainder
+                        While Math.Abs(Math.Round(numberOfDisNodes, 0) - numberOfDisNodes) >= 0.0001
+                            'Milimiter precision
+                            minInterval += 0.0001
+                            numberOfDisNodes = conduitLength / minInterval
+                        End While
+                        disLength = minInterval
+                        numberOfDisNodes = numberOfDisNodes - 1
+                        'Verify the intervals
+                        If disLength > maxInterval Then
+                            MsgBox("Please, increase your interval range")
+                            main.pbAnalyze.Value = 0
+                            Exit Function
                         End If
                     End If
                 End If
-                'DxD BASED INTERVAL
-                If type = 3 Then
+            End If
+            'DxD BASED INTERVAL
+            If type = 3 Then
+
+                If xsectionShape = "IRREGULAR" Then
+                    MsgBox("IRREGULAR SHAPE NOT WORKING")
+                    Exit Function
+                Else
                     numberOfDisNodes = Math.Round(conduitLength / (DxDRatio * geom1)) - 1
                     disLength = conduitLength / (numberOfDisNodes + 1)
                 End If
