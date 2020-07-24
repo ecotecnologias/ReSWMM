@@ -1270,8 +1270,7 @@
     <value>This software is able to read and edit the SWMM input file, recommend the time step based on EXTRAN recomendation and Vasconcelos et al. (2018), and create artificial spatial discretization by placing dummy nodes between actual nodes. Furthermore, the software analyses the input file to verify if discretization is required. This analysis is also based on the EXTRAN recommendation that the longest conduit in the system does not exceed four or five times the length of the shortest conduit.
 
 Three types of discretization are available:
-Regular Discretization -&gt; Places regular dummy nodes between actual nodes.
-Fixed Interval Discretization -&gt; Limits the maximum and minimum space between dummy nodes by a maximum and minimum threshold.
+Interval Fixed Discretization -&gt; Limits the maximum and minimum space between dummy nodes by a maximum and minimum threshold.
 DxD Based Discretization -&gt; Divides the Max Depth of each conduit by a constant and the value obtained is the number of dummy nodes. </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
